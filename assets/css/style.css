@@ -248,6 +248,14 @@ ul li {
   }
 }
 
+.navbar-brand img {
+  filter: brightness(0) invert(0); /* logo black */
+}
+
+.navbar-brand span {
+  color: #000 !important; /* text black */
+}
+
 .logo-text {
   font-size: 1.8rem;
   font-weight: 700;
