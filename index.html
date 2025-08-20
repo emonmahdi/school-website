@@ -345,74 +345,111 @@
          <div class="container">
             <div class="row g-4 align-items-stretch">
 
-               <!-- Principal Message (Left) -->
+               <!-- Notice Board (Left) -->
                <div class="col-lg-8">
-                  <div class="card shadow-sm h-100 p-4 principal-card">
-                     <div class="row g-3 align-items-center">
-                        <div class="col-md-3 text-center">
-                           <img src="assets/images/trainer/trainer1.png" class="img-fluid rounded-circle shadow-sm"
-                              alt="Principal">
-                        </div>
-                        <div class="col-md-9">
-                           <h3 class="fw-bold mb-1">Principal’s Message</h3>
-                           <h6 class="text-muted">Dr. John Doe, Principal</h6>
-                           <hr>
-                           <p class="lead text-secondary">
-                              Welcome to <strong>Our School</strong> – a place where knowledge meets character.
-                              We strive to nurture creativity, innovation, and academic excellence, preparing our
-                              students to face future challenges with confidence.
-                           </p>
-                           <p class="text-muted mb-3">
-                              At our school, we emphasize discipline, moral values, and modern learning techniques.
-                              Together, let’s inspire every child to achieve their full potential.
-                           </p>
-                           <a href="#" class="btn my-btn-small-primary">Read More</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <!-- Notice Board (Right) -->
-               <div class="col-lg-4">
                   <div class="card shadow-sm h-100">
                      <div class="card-header text-white fw-bold d-flex align-items-center">
                         <i class="fa-solid fa-bullhorn me-2"></i> Latest Notices
                      </div>
                      <div class="card-body notice-board">
-                        <ul class="list-unstyled mb-0">
-                           <li class="mb-3">
-                              <i class="fa-solid fa-circle text-danger small me-2"></i>
-                              <a href="notice-single.html" class="text-decoration-none text-dark fw-semibold">
-                                 Admission open for 2025 session
-                              </a>
-                              <div class="small text-muted">Published: Jan 15, 2025</div>
-                           </li>
-                           <li class="mb-3">
-                              <i class="fa-solid fa-circle text-success small me-2"></i>
-                              <a href="notice-single.html" class="text-decoration-none text-dark fw-semibold">
-                                 Annual Sports Day – 5th September
-                              </a>
-                              <div class="small text-muted">Published: Dec 20, 2024</div>
-                           </li>
-                           <li class="mb-3">
-                              <i class="fa-solid fa-circle text-warning small me-2"></i>
-                              <a href="notice-single.html" class="text-decoration-none text-dark fw-semibold">
-                                 Parent-Teacher Meeting Next Friday
-                              </a>
-                              <div class="small text-muted">Published: Nov 10, 2024</div>
-                           </li>
-                           <li>
-                              <i class="fa-solid fa-circle text-info small me-2"></i>
-                              <a href="notice-single.html" class="text-decoration-none text-dark fw-semibold">
-                                 Summer Vacation from 15th June
-                              </a>
-                              <div class="small text-muted">Published: Oct 01, 2024</div>
-                           </li>
-                        </ul>
+                        <div class="table-responsive">
+                           <table class="table align-middle notice-table">
+                              <tbody>
+                                 <!-- Notice Row -->
+                                 <tr>
+                                    <td class="notice-icon">
+                                       <i class="fa-solid fa-circle text-danger"></i>
+                                    </td>
+                                    <td>
+                                       <a href="notice-single.html" class="fw-semibold text-dark text-decoration-none">
+                                          Admission open for 2025 session
+                                       </a>
+                                       <div class="small text-muted">Published: Jan 15, 2025</div>
+                                    </td>
+                                    <td class="text-end">
+                                       <a href="#" class="btn view-btn">View</a>
+                                       <a href="#" class="btn download-btn">Download</a>
+                                    </td>
+                                 </tr>
+
+                                 <tr>
+                                    <td class="notice-icon">
+                                       <i class="fa-solid fa-circle text-success"></i>
+                                    </td>
+                                    <td>
+                                       <a href="notice-single.html" class="fw-semibold text-dark text-decoration-none">
+                                          Annual Sports Day – 5th September
+                                       </a>
+                                       <div class="small text-muted">Published: Dec 20, 2024</div>
+                                    </td>
+                                    <td class="text-end">
+                                       <a href="#" class="btn view-btn">View</a>
+                                       <a href="#" class="btn download-btn">Download</a>
+                                    </td>
+                                 </tr>
+
+                                 <tr>
+                                    <td class="notice-icon">
+                                       <i class="fa-solid fa-circle text-warning"></i>
+                                    </td>
+                                    <td>
+                                       <a href="notice-single.html" class="fw-semibold text-dark text-decoration-none">
+                                          Parent-Teacher Meeting Next Friday
+                                       </a>
+                                       <div class="small text-muted">Published: Nov 10, 2024</div>
+                                    </td>
+                                    <td class="text-end">
+                                       <a href="#" class="btn view-btn">View</a>
+                                       <a href="#" class="btn download-btn">Download</a>
+                                    </td>
+                                 </tr>
+
+                                 <tr>
+                                    <td class="notice-icon">
+                                       <i class="fa-solid fa-circle text-info"></i>
+                                    </td>
+                                    <td>
+                                       <a href="notice-single.html" class="fw-semibold text-dark text-decoration-none">
+                                          Summer Vacation from 15th June
+                                       </a>
+                                       <div class="small text-muted">Published: Oct 01, 2024</div>
+                                    </td>
+                                    <td class="text-end">
+                                       <a href="#" class="btn view-btn">View</a>
+                                       <a href="#" class="btn download-btn">Download</a>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
                      </div>
+
                      <div class="card-footer text-center bg-light">
                         <a href="all-notices.html" class="btn my-btn-small-primary">View All Notices</a>
                      </div>
+                  </div>
+               </div>
+
+               <!-- Principal Message (Right) -->
+               <div class="col-lg-4">
+                  <div class="card shadow-sm h-100 p-4 principal-card">
+                     <img src="assets/images/trainer/trainer1.png"
+                        class="principle-img img-fluid rounded-circle shadow-sm" alt="Principal">
+                     <h3 class="fw-bold mb-1 text-center">Principal’s Message</h3>
+                     <h6 class="text-muted text-center">Dr. John Doe, Principal</h6>
+                     <span class="text-muted text-center join-date">Join Date: 12 Jan, 2002</span>
+                     <hr>
+                     <p class="lead text-secondary">
+                        Welcome to <strong>Our School</strong> – a place where knowledge meets character.
+                        We strive to nurture creativity, innovation, and academic excellence, preparing our
+                        students to face future challenges with confidence.
+                     </p>
+                     <p class="text-muted mb-3">
+                        At our school, we emphasize discipline, moral values, and modern learning techniques.
+                        Together, let’s inspire every child to achieve their full potential.
+                     </p>
+                     <a href="#" class="btn my-btn-small-primary">Read More</a>
+
                   </div>
                </div>
 

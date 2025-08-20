@@ -184,6 +184,16 @@ ul li {
   border-radius: 12px;
   background: linear-gradient(135deg, #ffffff, #f9fafc);
 }
+.principle-img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.join-date {
+  font-size: 14px;
+}
 .principal-notice h3 {
   color: #2c3e50;
 }
@@ -191,7 +201,87 @@ ul li {
   background-color: var(--primary);
 }
 .notice-board {
-  max-height: 280px;
+  padding: 0;
+}
+
+.notice-table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 100%;
+}
+
+.notice-table tr {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.notice-table td {
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.notice-table .notice-icon {
+  width: 40px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.notice-table a {
+  transition: color 0.3s ease;
+}
+
+.notice-table a:hover {
+  color: #0d6efd;
+}
+
+.notice-table .btn {
+  border-radius: 30px;
+  font-size: 0.85rem;
+  padding: 5px 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.notice-table .btn:hover {
+  transform: translateY(-2px);
+}
+/* View Button */
+.view-btn {
+  background: var(--secondary);
+  color: #fff;
+  border: 2px solid var(--secondary);
+}
+.view-btn:hover {
+  background: transparent;
+  color: var(--secondary);
+  box-shadow: 0 4px 12px rgba(28, 53, 61, 0.3);
+}
+
+/* Download Button */
+.download-btn {
+  background: var(--primary);
+  color: #fff;
+  border: 2px solid var(--primary);
+  margin-left: 10px;
+}
+.download-btn:hover {
+  background: transparent;
+  color: var(--primary);
+  box-shadow: 0 4px 12px rgba(236, 28, 36, 0.3);
+}
+
+/* Responsive (stack buttons on small screens) */
+@media (max-width: 576px) {
+  .btn-custom {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+  }
+}
+
+/* .notice-board {
+  max-height: auto;
   overflow-y: auto;
 }
 .notice-board li a {
@@ -206,7 +296,7 @@ ul li {
 .notice-board::-webkit-scrollbar-thumb {
   background: #bbb;
   border-radius: 10px;
-}
+} */
 /* ================ Principle and Notic Section End ========== */
 /*===============================
    Header Styles
