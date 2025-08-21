@@ -17,57 +17,66 @@
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <!-- Animate.css for smooth animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Custom CSS -->
     <style>
-        .notice-detail {
-            border-radius: 12px;
+        :root {
+            --primary: #ec1c24;
+            --secondary: #1c353d;
+        }
+
+        .admission-section h2 {
+            color: var(--secondary);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .admission-section .icon {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .admission-process {
+            background: #f8f9fa;
+            padding: 50px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .step {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .step .icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .admission-form {
             background: #fff;
-            padding: 2rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
 
-        .notice-meta {
-            font-size: 14px;
-            color: #6c757d;
+        .admission-form h3 {
+            color: var(--secondary);
+            margin-bottom: 20px;
         }
 
-        .notice-meta i {
-            margin-right: 5px;
+        .btn-primary-custom {
+            background: var(--primary);
+            border: none;
+            color: #fff;
+            font-weight: bold;
         }
 
-        .notice-content {
-            margin-top: 1.5rem;
-            font-size: 16px;
-            line-height: 1.7;
-            color: #444;
-        }
-
-        .back-btn {
-            margin-top: 2rem;
+        .btn-primary-custom:hover {
+            background: #c4171b;
         }
     </style>
-</head>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>School Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="assets/css/all.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <!-- Favicon (Optional) -->
-    <link rel="icon" href="assets/images/favicon.png" type="image/png">
-    <!-- Animate.css for smooth animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -76,8 +85,19 @@
     <header class="topbar-header text-white">
         <div class="container">
             <div class="row align-items-center text-center text-md-start">
+                <!-- Left: Social Icons -->
+                <!-- <div class="col-12 col-md-8 d-flex justify-content-center justify-content-md-start gap-3">
+               <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+               <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+               <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+               <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div> -->
                 <!-- Center: Coaching Center Address -->
                 <div class="col-12 col-md-12 text-center">
+                    <!-- <span class="fw-bold text-white"><i class="fas fa-map-marker-alt me-1"></i> Address:
+
+                  Mymensingh Sadar, Bangladesh
+               </span><br> -->
                     <!-- Latest New Section Start -->
                     <div class="notice-bar">
                         <div class="notice-label">Latest News</div>
@@ -90,8 +110,13 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Latest New Section End -->
 
                 </div>
+                <!-- Right: Mobile Number -->
+                <!-- <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end gap-2">
+               <span><i class="fas fa-phone-alt me-1 text-success"></i> +880 1711-000000</span>
+            </div> -->
             </div>
         </div>
     </header>
@@ -115,7 +140,7 @@
 
                 <!-- About -->
                 <li class="nav-item">
-                    <a href="about.html" class="nav-link active px-3">About Us</a>
+                    <a href="about.html" class="nav-link px-3">About Us</a>
                 </li>
 
                 <!-- Academics Dropdown -->
@@ -131,7 +156,7 @@
 
                 <!-- Admissions -->
                 <li class="nav-item">
-                    <a href="admission.html" class="nav-link px-3">Admissions</a>
+                    <a href="admission.html" class="nav-link active px-3">Admissions</a>
                 </li>
 
                 <!-- Teachers -->
@@ -183,10 +208,10 @@
             <li>
                 <a href="#">Courses</a>
                 <ul class="submenu">
-                    <li><a href="courseDetails.html">Academic Coaching</a></li>
-                    <li><a href="courseDetails.html">Career Guidance</a></li>
-                    <li><a href="courseDetails.html">Skill Development</a></li>
-                    <li><a href="courseDetails.html">Online Workshops</a></li>
+                    <li><a href="">Academic Coaching</a></li>
+                    <li><a href="">Career Guidance</a></li>
+                    <li><a href="">Skill Development</a></li>
+                    <li><a href="">Online Workshops</a></li>
                 </ul>
             </li>
             <!-- Blog -->
@@ -205,55 +230,90 @@
         <!-- Page Top Header -->
         <section class="page-top-header text-center">
             <div class="container">
-                <h1 class="display-4 fw-bold">Notice </h1>
+                <h1 class="display-4 fw-bold">Admission </h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Notice</li>
+                        <li class="breadcrumb-item active" aria-current="page">Admission </li>
                     </ol>
                 </nav>
             </div>
         </section>
-        <!-- Notice Details Section -->
-        <section class="py-4">
-            <div class="container">
-                <div class="notice-detail">
-                    <h2 class="fw-bold mb-3">Admission Open for 2025 Session</h2>
-                    <div class="notice-meta mb-3">
-                        <i class="fa-solid fa-calendar-days"></i> Published: January 15, 2025
-                        &nbsp; | &nbsp;
-                        <i class="fa-solid fa-user-tie"></i> By: School Administration
-                    </div>
-                    <hr>
-                    <div class="notice-content">
-                        <p>
-                            We are pleased to announce that admissions are now open for the academic year
-                            <strong>2025–2026</strong>. Students and parents are invited to apply online or
-                            visit the school office for admission forms.
-                        </p>
-                        <p>
-                            The admission process will be open until <strong>March 31, 2025</strong>. Early
-                            applications are encouraged as seats are limited. Required documents include
-                            birth certificate, previous academic records, and passport-size photographs.
-                        </p>
-                        <p>
-                            For any queries, please contact the <strong>Admissions Office</strong> via phone
-                            at <a href="tel:+880123456789">+880 123 456 789</a> or email
-                            <a href="mailto:admission@ourschool.com">admission@ourschool.com</a>.
-                        </p>
-                        <p>
-                            We look forward to welcoming new students to our school community and
-                            embarking on an exciting academic journey together!
-                        </p>
-                    </div>
-                    <div class="back-btn">
-                        <a href="all-notices.html" class="btn btn-outline-primary">
-                            <i class="fa-solid fa-arrow-left me-2"></i> Back to Notices
-                        </a>
-                    </div>
+        <!-- Admission Requirements -->
+        <section class="container py-5 admission-section" data-aos="fade-up">
+            <h2><i class="fa-solid fa-list-check icon me-2"></i> Admission Requirements</h2>
+            <ul class="list-group mb-4">
+                <li class="list-group-item"><i class="fa-solid fa-id-card me-2 text-danger"></i> Completed Application
+                    Form</li>
+                <li class="list-group-item"><i class="fa-solid fa-file-lines me-2 text-danger"></i> Previous Academic
+                    Records</li>
+                <li class="list-group-item"><i class="fa-solid fa-passport me-2 text-danger"></i> Birth Certificate / ID
+                    Proof</li>
+                <li class="list-group-item"><i class="fa-solid fa-photo-film me-2 text-danger"></i> 2 Passport Size
+                    Photographs</li>
+            </ul>
+        </section>
+
+        <!-- Admission Process -->
+        <section class="container admission-process mb-5" data-aos="fade-right">
+            <h2 class="text-center mb-4"><i class="fa-solid fa-timeline icon me-2"></i> Admission Process</h2>
+            <div class="row">
+                <div class="col-md-3 step">
+                    <i class="fa-solid fa-file-circle-check icon"></i>
+                    <h5>Step 1</h5>
+                    <p>Fill out the application form</p>
+                </div>
+                <div class="col-md-3 step">
+                    <i class="fa-solid fa-user-check icon"></i>
+                    <h5>Step 2</h5>
+                    <p>Submit required documents</p>
+                </div>
+                <div class="col-md-3 step">
+                    <i class="fa-solid fa-comments icon"></i>
+                    <h5>Step 3</h5>
+                    <p>Attend the interview & assessment</p>
+                </div>
+                <div class="col-md-3 step">
+                    <i class="fa-solid fa-graduation-cap icon"></i>
+                    <h5>Step 4</h5>
+                    <p>Confirmation of Admission</p>
                 </div>
             </div>
         </section>
+
+        <!-- Admission Form -->
+        <section class="container mb-5" data-aos="fade-left">
+            <div class="admission-form">
+                <h3><i class="fa-solid fa-pen-to-square icon me-2"></i> Apply for Admission</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Student Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter full name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="class" class="form-label">Applying For Class</label>
+                        <select class="form-select" id="class" required>
+                            <option selected disabled>Select class</option>
+                            <option>Nursery</option>
+                            <option>KG</option>
+                            <option>Class 1</option>
+                            <option>Class 2</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Parent Contact Number</label>
+                        <input type="text" class="form-control" id="phone" placeholder="Enter phone number" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Parent Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary-custom w-100"><i
+                            class="fa-solid fa-paper-plane me-2"></i> Submit Application</button>
+                </form>
+            </div>
+        </section>
+
 
     </main>
     <!-- Main Content End -->
@@ -342,48 +402,6 @@
     </script>
     <script> new WOW().init(); </script>
 
-    <script>
-        document.querySelectorAll(".faq-question").forEach(button => {
-            button.addEventListener("click", () => {
-                const faqItem = button.parentElement;
-                faqItem.classList.toggle("active");
-            });
-        });
-
-    </script>
-    <!-- counter -->
-    <script>
-        const counters = document.querySelectorAll('.counter');
-        const speed = 200;
-
-        const animateCounters = () => {
-            counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText;
-                    const increment = Math.ceil(target / speed);
-
-                    if (count < target) {
-                        counter.innerText = count + increment;
-                        setTimeout(updateCount, 20);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-                updateCount();
-            });
-        };
-
-        let counterSection = document.querySelector("#counters");
-        let started = false;
-        window.addEventListener("scroll", () => {
-            let sectionTop = counterSection.offsetTop - window.innerHeight + 200;
-            if (window.scrollY > sectionTop && !started) {
-                animateCounters();
-                started = true;
-            }
-        });
-    </script>
 
 </body>
 
