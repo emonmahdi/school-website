@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>School Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="assets/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Favicon (Optional) -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <!-- Animate.css for smooth animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Custom CSS -->
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary: #ec1c24;
+            --secondary: #1c353d;
+            --light-bg: #f8f9fa;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: var(--primary);
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 40px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .info-section {
+            background: var(--light-bg);
+            padding: 50px 20px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+        }
+
+        .info-section img {
+            border-radius: 12px;
+        }
+
+        /* Primary Section */
+        .primary-section {
+            background: #f9f9f9;
+        }
+
+        .primary-section h2 {
+            font-weight: 700;
+        }
+
+        .primary-section p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .primary-section ul li {
+            font-size: 1rem;
+        }
+
+        .primary-section img {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .primary-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Teaching Approach */
+        .section-title {
+            font-size: 2.2rem;
+            color: #222;
+        }
+
+        .icon-box i {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-card:hover .icon-box i {
+            transform: scale(1.2);
+        }
+
+        .hover-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Curriculam Details */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .list-group-item {
+            font-size: 1.1rem;
+            padding: 12px 15px;
+            border: none;
+            background: #f9f9f9;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .list-group-item:hover {
+            background: #f1f1f1;
+            transform: translateX(5px);
+        }
+
+        .list-group-item i {
+            font-size: 1.4rem;
+        }
+
+        /* Activities Section */
+        .activity-card {
+            background: #fff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-10px);
+            background: #f8f9fa;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .hover-effect i {
+            transition: color 0.3s ease;
+        }
+
+        .hover-effect:hover i {
+            color: #ec1c24;
+            /* Primary color */
+        }
+
+
+        .cta-section {
+            background: var(--primary);
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 50px;
+        }
+
+        .cta-section h2 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <!-- Header Top -->
+    <header class="topbar-header text-white">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+                <!-- Left: Social Icons -->
+                <!-- <div class="col-12 col-md-8 d-flex justify-content-center justify-content-md-start gap-3">
+               <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+               <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+               <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+               <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div> -->
+                <!-- Center: Coaching Center Address -->
+                <div class="col-12 col-md-12 text-center">
+                    <!-- <span class="fw-bold text-white"><i class="fas fa-map-marker-alt me-1"></i> Address:
+
+                  Mymensingh Sadar, Bangladesh
+               </span><br> -->
+                    <!-- Latest New Section Start -->
+                    <div class="notice-bar">
+                        <div class="notice-label">Latest News</div>
+                        <div class="notice-content">
+                            <div class="scroll-text">
+                                📢 কলেজে আগামীকাল থেকে বার্ষিক পরীক্ষা শুরু হবে। সকল শিক্ষার্থীকে যথাসময়ে উপস্থিত থাকার
+                                নির্দেশ
+                                দেওয়া হলো। নতুন
+                                ভর্তি কার্যক্রম ৫ জুলাই শুরু হবে। আরও তথ্যের জন্য ওয়েবসাইট ভিজিট করুন।
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Latest New Section End -->
+
+                </div>
+                <!-- Right: Mobile Number -->
+                <!-- <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end gap-2">
+               <span><i class="fas fa-phone-alt me-1 text-success"></i> +880 1711-000000</span>
+            </div> -->
+            </div>
+        </div>
+    </header>
+    <!-- Bottom Sticky Nav -->
+    <nav class="header-bottom sticky-top shadow-sm bg-white">
+        <div class="container d-flex align-items-center justify-content-between py-2">
+            <!-- Logo -->
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img src="assets/images/white-loog.png" alt="School Logo" height="60" class="me-2">
+            </a>
+            <!-- Hamburger for Mobile -->
+            <button class="btn d-md-none" id="menu-toggle">
+                <i class="fas fa-bars fs-5"></i>
+            </button>
+            <!-- Main Menu -->
+            <ul class="nav d-none d-md-flex mb-0 fw-semibold">
+                <!-- Home -->
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active px-3">Home</a>
+                </li>
+
+                <!-- About -->
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link px-3">About Us</a>
+                </li>
+
+                <!-- Academics Dropdown -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle px-3" data-bs-toggle="dropdown">Academics</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="academic.html">Primary Section</a></li>
+                        <li><a class="dropdown-item" href="academic.html">Secondary Section</a></li>
+                        <li><a class="dropdown-item" href="academic.html">Higher Secondary</a></li>
+                        <li><a class="dropdown-item" href="academic.html">Subjects & Curriculum</a></li>
+                    </ul>
+                </li>
+
+                <!-- Admissions -->
+                <li class="nav-item">
+                    <a href="admission.html" class="nav-link px-3">Admissions</a>
+                </li>
+
+                <!-- Teachers -->
+                <li class="nav-item">
+                    <a href="teachers.html" class="nav-link px-3">Teachers</a>
+                </li>
+
+                <!-- Notice Board -->
+                <li class="nav-item">
+                    <a href="all-notices.html" class="nav-link px-3">Notice Board</a>
+                </li>
+
+                <!-- Events -->
+                <li class="nav-item">
+                    <a href="events.html" class="nav-link px-3">Events</a>
+                </li>
+
+                <!-- Gallery Dropdown -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle px-3" data-bs-toggle="dropdown">Gallery</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="gallery.html">Image Gallery</a></li>
+                        <li><a class="dropdown-item" href="videoGallery.html">Video Gallery</a></li>
+                    </ul>
+                </li>
+
+                <!-- Results -->
+                <li class="nav-item">
+                    <a href="results.html" class="nav-link px-3">Results</a>
+                </li>
+
+                <!-- Contact -->
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link px-3">Contact</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Mobile Slide Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <button id="closeMenu" class="btn-close btn-close-white ms-auto m-3"></button>
+        <ul class="list-unstyled ps-2 pt-4 pe-4">
+            <!-- Home -->
+            <li><a href="index.html">Home</a></li>
+            <!-- About Us -->
+            <li><a href="about.html">About Us</a></li>
+            <!-- Courses -->
+            <li>
+                <a href="#">Courses</a>
+                <ul class="submenu">
+                    <li><a href="">Academic Coaching</a></li>
+                    <li><a href="">Career Guidance</a></li>
+                    <li><a href="">Skill Development</a></li>
+                    <li><a href="">Online Workshops</a></li>
+                </ul>
+            </li>
+            <!-- Blog -->
+            <li><a href="blog.html">Blog</a></li>
+            <!-- Gallery -->
+            <li><a href="gallery.html">Image Gallery</a></li>
+            <!-- Video Gallery -->
+            <li><a href="videoGallery.html">Video Gallery</a></li>
+            <!-- Contact -->
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Start -->
+    <main>
+        <!-- Page Top Header -->
+        <section class="page-top-header text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bold">Academic</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Academic</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+        <!-- academic Body section -->
+        <!-- About Primary Section -->
+        <section class="container py-5" data-aos="fade-up">
+            <h2 class="section-title">About the Primary Section</h2>
+            <div class="row align-items-center shadow rounded p-4"
+                style="border: 2px solid var(--primary); background: #fff;">
+
+                <!-- Left Content -->
+                <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right" data-aos-duration="1200">
+                    <h2 class="text-primary mb-3">
+                        <i class="fas fa-book-open me-2 text-danger"></i> Primary Section
+                    </h2>
+                    <p class="text-muted mb-3">
+                        Our Primary Section caters to students from <strong>Grades 1 to 5</strong>, focusing on
+                        essential skills like reading, writing, numeracy, and social development. We create a nurturing
+                        environment where young learners explore their potential through engaging lessons, interactive
+                        activities, and moral education.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-graduation-cap text-danger me-2"></i> Grades: Class 1 – Class
+                            5</li>
+                        <li class="mb-2"><i class="fas fa-users text-danger me-2"></i> Student-Centered Learning</li>
+                        <li class="mb-2"><i class="fas fa-book text-danger me-2"></i> Emphasis on Literacy & Numeracy
+                        </li>
+                        <li class="mb-2"><i class="fas fa-lightbulb text-danger me-2"></i> Activity-Based Learning
+                            Methods</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline-danger mt-3">
+                        <i class="fas fa-arrow-right me-2"></i> Learn More
+                    </a>
+                </div>
+
+                <!-- Right Image -->
+                <div class="col-md-6 text-center" data-aos="fade-left" data-aos-duration="1200">
+                    <img src="assets/images/school/sc2.jpg" alt="Primary Class"
+                        class="img-fluid rounded shadow-lg border border-3" style="border-color: var(--secondary);">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Teaching Approach -->
+        <section class="container info-section py-5" data-aos="fade-right">
+            <h2 class="section-title text-center mb-4 fw-bold">Our Teaching Approach</h2>
+            <p class="text-center mb-5 text-muted">
+                We believe in child-centric, activity-based learning to foster curiosity, creativity, and confidence.
+            </p>
+            <div class="row text-center g-4">
+
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card shadow border-0 h-100 p-4 rounded-4 hover-card">
+                        <div class="icon-box mb-3">
+                            <i class="fas fa-comments fa-3x text-danger"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Interactive Classes</h5>
+                        <p class="text-muted">
+                            Students actively participate in discussions and group projects to develop communication and
+                            teamwork skills.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="card shadow border-0 h-100 p-4 rounded-4 hover-card">
+                        <div class="icon-box mb-3">
+                            <i class="fas fa-flask fa-3x text-success"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Hands-On Learning</h5>
+                        <p class="text-muted">
+                            Practical activities, art, and experiments help students understand concepts better.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="card shadow border-0 h-100 p-4 rounded-4 hover-card">
+                        <div class="icon-box mb-3">
+                            <i class="fas fa-user-friends fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Personalized Attention</h5>
+                        <p class="text-muted">
+                            Low student-teacher ratio ensures every child receives individual guidance and care.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Curriculum Details -->
+        <section class="container py-5" data-aos="fade-up">
+            <h2 class="section-title text-center mb-4">
+                <i class="fas fa-book-open text-danger me-2"></i> Primary Curriculum
+            </h2>
+            <div class="row align-items-center">
+                <!-- Left: List -->
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-language text-primary me-3"></i>
+                            Bangla & English Language Development
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-calculator text-success me-3"></i>
+                            Mathematics & Problem-Solving
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-flask text-info me-3"></i>
+                            General Science
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-globe-asia text-warning me-3"></i>
+                            Social Studies & Moral Education
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-paint-brush text-danger me-3"></i>
+                            Art, Craft & Music
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-running text-primary me-3"></i>
+                            Physical Education & Health
+                        </li>
+                    </ul>
+                </div>
+                <!-- Right: Image -->
+                <div class="col-md-6 text-center">
+                    <img src="assets/images/school/sc3.jpg" alt="Curriculum"
+                        class="img-fluid rounded shadow-lg border border-3 border-danger"
+                        style="max-height: 400px; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Activities Section -->
+        <section class="container py-5" data-aos="fade-up">
+            <h2 class="section-title text-center mb-4">Co-Curricular Activities</h2>
+            <p class="text-center mb-5 text-muted">
+                We provide a variety of activities to foster creativity, discipline, and teamwork among our students.
+            </p>
+            <div class="row text-center">
+                <!-- Activity 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="activity-card p-4 shadow rounded hover-effect">
+                        <i class="fas fa-paint-brush fa-3x text-danger mb-3"></i>
+                        <h5 class="fw-bold">Art & Drawing</h5>
+                        <p class="text-muted">Unleash creativity through painting, sketching, and craft sessions.</p>
+                    </div>
+                </div>
+                <!-- Activity 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="activity-card p-4 shadow rounded hover-effect">
+                        <i class="fas fa-theater-masks fa-3x text-danger mb-3"></i>
+                        <h5 class="fw-bold">Storytelling & Drama</h5>
+                        <p class="text-muted">Build confidence and communication skills with engaging performances.</p>
+                    </div>
+                </div>
+                <!-- Activity 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="activity-card p-4 shadow rounded hover-effect">
+                        <i class="fas fa-futbol fa-3x text-danger mb-3"></i>
+                        <h5 class="fw-bold">Sports & Games</h5>
+                        <p class="text-muted">Promote teamwork, discipline, and fitness through physical activities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" data-aos="zoom-in">
+            <h2>Enroll Your Child Today</h2>
+            <p>Give your child the best start with our Primary Section’s strong academic foundation and values-based
+                education.</p>
+            <a href="admission.html" class="btn btn-light btn-lg mt-4">Apply Now</a>
+        </section>
+
+
+    </main>
+    <!-- Main Content End -->
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row text-md-start">
+                <!-- Column 1: Logo & Social -->
+                <div class="col-md-3 mb-4">
+                    <div class="footer-logo">
+                        <a href="index.html" class="text-white">
+                            <a href="index.html" class="d-flex align-items-center">
+                                <img src="assets/images/white-loog.png" alt="Konika Coaching" height="60" class="me-2">
+                            </a>
+                            <!-- Konika <span>Cadet Academy</span></a> -->
+                    </div>
+                    <p class="mt-2" style="font-size: 14px; color: #bbb;">
+                        Empowering students with knowledge, skills, and confidence since 2005.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Column 2: Useful Links -->
+                <div class="col-md-2 mb-4">
+                    <h5>Useful Links</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="admission.html">Admission Info</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Academic Resources -->
+                <div class="col-md-2 mb-4">
+                    <h5>Academics</h5>
+                    <ul>
+                        <li><a href="courses.html">Our Courses</a></li>
+                        <li><a href="schedule.html">Class Schedule</a></li>
+                        <li><a href="results.html">Exam Results</a></li>
+                        <li><a href="events.html">Events & Seminars</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Newsletter -->
+                <div class="col-md-2 mb-4">
+                    <h5>Join Our Newsletter</h5>
+                    <form class="newsletter">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <!-- Column 3: Academic Resources -->
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Mymensingh Sadar, Bangladesh</li>
+                        <li><i class="fas fa-phone me-2"></i> +880 1234-567890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@konikacoaching.com</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                &copy; 2025 Konika Cadet Academy. All Rights Reserved | Designed with ❤️ for Students
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- Bootstrap JS (with Popper) -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+    <!-- Responsive Menu JS -->
+    <script src="assets/js/responsiveMenu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script> new WOW().init(); </script>
+
+
+</body>
+
+</html>

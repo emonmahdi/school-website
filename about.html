@@ -1,57 +1,888 @@
-<!-- About Page -->
-<section class="py-5">
-    <div class="container">
-        <h2 class="fw-bold text-center mb-4">About Our School</h2>
-        <p class="lead text-center text-muted mb-5">
-            “Education is the most powerful weapon which you can use to change the world.”
-            – Nelson Mandela
-        </p>
+<!DOCTYPE html>
+<html lang="en">
 
-        <!-- School History -->
-        <div class="mb-5">
-            <h3 class="fw-semibold mb-3">📖 Our History</h3>
-            <p class="text-muted">
-                Sunrise Model School was founded in 1995 with the vision of providing quality education in a
-                nurturing environment. Over the years, we have grown into one of the most respected schools in
-                the region, offering modern facilities, well-trained teachers, and a strong academic record.
-            </p>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>School Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="assets/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Favicon (Optional) -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <!-- Animate.css for smooth animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <!-- Header Top -->
+    <header class="topbar-header text-white">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+                <!-- Center: Coaching Center Address -->
+                <div class="col-12 col-md-12 text-center">
+                    <!-- Latest New Section Start -->
+                    <div class="notice-bar">
+                        <div class="notice-label">Latest News</div>
+                        <div class="notice-content">
+                            <div class="scroll-text">
+                                📢 কলেজে আগামীকাল থেকে বার্ষিক পরীক্ষা শুরু হবে। সকল শিক্ষার্থীকে যথাসময়ে উপস্থিত থাকার
+                                নির্দেশ
+                                দেওয়া হলো। নতুন
+                                ভর্তি কার্যক্রম ৫ জুলাই শুরু হবে। আরও তথ্যের জন্য ওয়েবসাইট ভিজিট করুন।
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
+    </header>
+    <!-- Bottom Sticky Nav -->
+    <nav class="header-bottom sticky-top shadow-sm bg-white">
+        <div class="container d-flex align-items-center justify-content-between py-2">
+            <!-- Logo -->
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img src="assets/images/white-loog.png" alt="School Logo" height="60" class="me-2">
+            </a>
+            <!-- Hamburger for Mobile -->
+            <button class="btn d-md-none" id="menu-toggle">
+                <i class="fas fa-bars fs-5"></i>
+            </button>
+            <!-- Main Menu -->
+            <ul class="nav d-none d-md-flex mb-0 fw-semibold">
+                <!-- Home -->
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link px-3">Home</a>
+                </li>
 
-        <!-- Mission -->
-        <div class="mb-5">
-            <h3 class="fw-semibold mb-3">🎯 Our Mission</h3>
-            <p class="text-muted">
-                Our mission is to provide holistic education that empowers students to develop critical thinking,
-                creativity, leadership, and compassion. We aim to create a learning atmosphere where every
-                student feels valued, safe, and inspired.
-            </p>
-        </div>
+                <!-- About -->
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link active px-3">About Us</a>
+                </li>
 
-        <!-- Vision -->
-        <div class="mb-5">
-            <h3 class="fw-semibold mb-3">👁️ Our Vision</h3>
-            <p class="text-muted">
-                Our vision is to build a generation of lifelong learners and responsible citizens who will
-                contribute positively to society. We envision our students excelling not only academically but
-                also morally and socially.
-            </p>
-        </div>
+                <!-- Academics Dropdown -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle px-3" data-bs-toggle="dropdown">Academics</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="academic.html">Primary Section</a></li>
+                        <li><a class="dropdown-item" href="academic.html">Secondary Section</a></li>
+                        <li><a class="dropdown-item" href="academic.html">Higher Secondary</a></li>
+                        <li><a class="dropdown-item" href="academic.html">Subjects & Curriculum</a></li>
+                    </ul>
+                </li>
 
-        <!-- Core Values -->
-        <div class="mb-5">
-            <h3 class="fw-semibold mb-3">🌟 Core Values</h3>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">📌 Excellence in Teaching & Learning</li>
-                <li class="list-group-item">📌 Respect & Integrity</li>
-                <li class="list-group-item">📌 Innovation & Creativity</li>
-                <li class="list-group-item">📌 Discipline & Responsibility</li>
-                <li class="list-group-item">📌 Social & Cultural Awareness</li>
+                <!-- Admissions -->
+                <li class="nav-item">
+                    <a href="admission.html" class="nav-link px-3">Admissions</a>
+                </li>
+
+                <!-- Teachers -->
+                <li class="nav-item">
+                    <a href="teachers.html" class="nav-link px-3">Teachers</a>
+                </li>
+
+                <!-- Notice Board -->
+                <li class="nav-item">
+                    <a href="all-notices.html" class="nav-link px-3">Notice Board</a>
+                </li>
+
+                <!-- Events -->
+                <li class="nav-item">
+                    <a href="events.html" class="nav-link px-3">Events</a>
+                </li>
+
+                <!-- Gallery Dropdown -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle px-3" data-bs-toggle="dropdown">Gallery</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="gallery.html">Image Gallery</a></li>
+                        <li><a class="dropdown-item" href="videoGallery.html">Video Gallery</a></li>
+                    </ul>
+                </li>
+
+                <!-- Results -->
+                <li class="nav-item">
+                    <a href="results.html" class="nav-link px-3">Results</a>
+                </li>
+
+                <!-- Contact -->
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link px-3">Contact</a>
+                </li>
             </ul>
-        </div>
 
-        <!-- Call to Action -->
-        <div class="text-center mt-5">
-            <a href="admission.html" class="btn btn-success px-4 py-2">Apply for Admission</a>
         </div>
+    </nav>
+    <!-- Mobile Slide Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <button id="closeMenu" class="btn-close btn-close-white ms-auto m-3"></button>
+        <ul class="list-unstyled ps-2 pt-4 pe-4">
+            <!-- Home -->
+            <li><a href="index.html">Home</a></li>
+            <!-- About Us -->
+            <li><a href="about.html">About Us</a></li>
+            <!-- Courses -->
+            <li>
+                <a href="#">Courses</a>
+                <ul class="submenu">
+                    <li><a href="courseDetails.html">Academic Coaching</a></li>
+                    <li><a href="courseDetails.html">Career Guidance</a></li>
+                    <li><a href="courseDetails.html">Skill Development</a></li>
+                    <li><a href="courseDetails.html">Online Workshops</a></li>
+                </ul>
+            </li>
+            <!-- Blog -->
+            <li><a href="blog.html">Blog</a></li>
+            <!-- Gallery -->
+            <li><a href="gallery.html">Image Gallery</a></li>
+            <!-- Video Gallery -->
+            <li><a href="videoGallery.html">Video Gallery</a></li>
+            <!-- Contact -->
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </div>
-</section>
+
+    <!-- Main Content Start -->
+    <main>
+        <!-- Page Top Header -->
+        <section class="page-top-header text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bold">About Us</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">About</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+        <!-- About section  -->
+        <section class="about-section bg-light position-relative overflow-hidden">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <!-- Text Content -->
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="mb-5" data-aos="fade-up">
+                            <h2 class="fw-bold section-title" style="color: var(--secondary);">About <span
+                                    style="color: var(--primary);">Our School</span></h2>
+                        </div>
+                        <p class="text-muted fs-5">
+                            <strong>Sunrise Model School</strong> has been a beacon of excellence since 1995. Over the
+                            years,
+                            we’ve built a reputation for academic brilliance, moral integrity, and holistic development.
+                            With state-of-the-art facilities and a nurturing environment, our school fosters both
+                            knowledge
+                            and character for tomorrow’s leaders.
+                        </p>
+
+                        <!-- History -->
+                        <div class="my-4" data-aos="fade-up" data-aos-delay="100">
+                            <h4 class="fw-semibold text-dark"><i
+                                    class="fa-solid fa-book-open-reader text-danger me-2"></i>Our
+                                History</h4>
+                            <p class="text-muted mb-0">
+                                Starting with just 50 students and a handful of teachers, Sunrise Model School has grown
+                                into
+                                a vibrant community of <strong>1500+ students</strong> and <strong>80 dedicated
+                                    faculty</strong>.
+                                From humble beginnings, we’ve become a modern institution while keeping our values
+                                intact.
+                            </p>
+                        </div>
+
+                        <!-- Mission & Vision in Cards -->
+                        <div class="row g-4 mt-2">
+                            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="card border-0 shadow h-100">
+                                    <div class="card-body mission-card">
+                                        <h5 class="fw-semibold mission-title"> Mission</h5>
+                                        <p class="text-muted">
+                                            To inspire students to pursue excellence in academics, creativity, and moral
+                                            values
+                                            through
+                                            innovative teaching methods and a supportive environment.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="card border-0 shadow h-100">
+                                    <div class="card-body vision-card">
+                                        <h5 class="fw-semibold vision-title"> Vision</h5>
+                                        <p class="text-muted">
+                                            To shape responsible, confident, and compassionate global citizens who are
+                                            prepared to
+                                            lead
+                                            and contribute positively to society.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="about.html" class="btn my-btn-small-primary mt-4 px-4 py-2">Learn More</a>
+                    </div>
+                    <!-- Image / Illustration -->
+                    <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                        <div class="about-img-wrapper position-relative">
+                            <img src="assets/images/school/school.jpg" class="img-fluid rounded shadow-lg"
+                                alt="School Building">
+                            <div
+                                class="position-absolute top-50 start-50 translate-middle bg-primary text-white px-4 py-2 rounded shadow">
+                                <h5 class="mb-0 fw-bold">Since 1995</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- School Facilities Section with AOS & Hover Animation -->
+        <section id="facilities" class="py-5 bg-light">
+            <div class="container">
+                <!-- Section Heading -->
+                <div class="mb-5" data-aos="fade-up">
+                    <h2 class="fw-bold section-title" style="color: var(--secondary);">Our <span
+                            style="color: var(--primary);">Facilities</span></h2>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Facility 1: Library -->
+                    <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="facility-card d-block p-4 text-center bg-white rounded shadow-sm h-100">
+                            <div class="facility-icon mb-3 text-primary">
+                                <i class="fas fa-book fa-3x"></i>
+                            </div>
+                            <h5 class="fw-bold mb-3">Modern Library</h5>
+                            <p class="text-muted mb-0">A vast collection of books and digital resources to encourage
+                                research
+                                and reading habits.</p>
+                        </div>
+                    </div>
+
+                    <!-- Facility 2: Science & Computer Labs -->
+                    <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="facility-card d-block p-4 text-center bg-white rounded shadow-sm h-100">
+                            <div class="facility-icon mb-3 text-success">
+                                <i class="fas fa-flask fa-3x"></i>
+                            </div>
+                            <h5 class="fw-bold mb-3">Labs & Technology</h5>
+                            <p class="text-muted mb-0">Well-equipped science and computer labs for practical and
+                                hands-on
+                                learning.</p>
+                        </div>
+                    </div>
+
+                    <!-- Facility 3: Sports & Playground -->
+                    <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="facility-card d-block p-4 text-center bg-white rounded shadow-sm h-100">
+                            <div class="facility-icon mb-3 text-warning">
+                                <i class="fas fa-basketball-ball fa-3x"></i>
+                            </div>
+                            <h5 class="fw-bold mb-3">Sports & Fitness</h5>
+                            <p class="text-muted mb-0">Playgrounds, indoor games, and fitness activities to promote a
+                                healthy
+                                lifestyle.</p>
+                        </div>
+                    </div>
+
+                    <!-- Facility 4: Transport & Hostel -->
+                    <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="facility-card d-block p-4 text-center bg-white rounded shadow-sm h-100">
+                            <div class="facility-icon mb-3 text-danger">
+                                <i class="fas fa-bus-alt fa-3x"></i>
+                            </div>
+                            <h5 class="fw-bold mb-3">Transport & Hostel</h5>
+                            <p class="text-muted mb-0">Safe school bus service and comfortable hostel facilities for
+                                outstation
+                                students.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Counter Section with Background Image & Overlay -->
+        <section id="counters" class="py-5 text-white position-relative"
+            style="background: url('assets/images/school/school.jpg') center/cover no-repeat;">
+            <!-- Overlay -->
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.6);">
+            </div>
+
+            <div class="container position-relative z-1">
+                <div class="row text-center justify-content-center">
+                    <!-- Students -->
+                    <div class="col-md-3 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
+                        <div class="p-4">
+                            <i class="fas fa-user-graduate fa-2x text-warning mb-3"></i>
+                            <h2 class="fw-bold"><span class="counter" data-target="1500">0</span>+</h2>
+                            <p class="mb-0">Students Enrolled</p>
+                        </div>
+                    </div>
+                    <!-- Teachers -->
+                    <div class="col-md-3 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="200">
+                        <div class="p-4">
+                            <i class="fas fa-chalkboard-teacher fa-2x text-info mb-3"></i>
+                            <h2 class="fw-bold"><span class="counter" data-target="75">0</span>+</h2>
+                            <p class="mb-0">Dedicated Teachers</p>
+                        </div>
+                    </div>
+                    <!-- Awards -->
+                    <div class="col-md-3 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="300">
+                        <div class="p-4">
+                            <i class="fas fa-trophy fa-2x text-danger mb-3"></i>
+                            <h2 class="fw-bold"><span class="counter" data-target="50">0</span>+</h2>
+                            <p class="mb-0">Awards & Achievements</p>
+                        </div>
+                    </div>
+                    <!-- Alumni -->
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+                        <div class="p-4">
+                            <i class="fas fa-users fa-2x text-success mb-3"></i>
+                            <h2 class="fw-bold"><span class="counter" data-target="5000">0</span>+</h2>
+                            <p class="mb-0">Successful Alumni</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- teachers section  -->
+        <section class="teachers-section py-5">
+            <div class="container">
+                <div class="mb-5" data-aos="fade-up">
+                    <h2 class="fw-bold section-title" style="color: var(--secondary);">Our <span
+                            style="color: var(--primary);">Teachers</span></h2>
+                </div>
+                <div class="row">
+                    <!-- Teacher 1 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="teacher-card h-100">
+                            <img src="assets/images/teacher/t1.jpg" alt="Teacher" class="teacher-img">
+                            <div class="teacher-body">
+                                <h5>Md. Rahman</h5>
+                                <p>Mathematics Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 2 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="teacher-card h-100">
+                            <img src="assets/images/teacher/t2.jpg" alt="Teacher" class="teacher-img">
+                            <div class="teacher-body">
+                                <h5>Fatema Akter</h5>
+                                <p>English Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 3 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="teacher-card h-100">
+                            <img src="assets/images/teacher/t1.jpg" alt="Teacher" class="teacher-img">
+                            <div class="teacher-body">
+                                <h5>Abdul Karim</h5>
+                                <p>Science Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 4 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="teacher-card h-100">
+                            <img src="assets/images/teacher/t2.jpg" alt="Teacher" class="teacher-img">
+                            <div class="teacher-body">
+                                <h5>Nasrin Jahan</h5>
+                                <p>Bangla Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 5 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="teacher-card h-100">
+                            <img src="assets/images/teacher/t1.jpg" alt="Teacher" class="teacher-img">
+                            <div class="teacher-body">
+                                <h5>Shafiqul Islam</h5>
+                                <p>Physics Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 6 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="teacher-card h-100">
+                            <img src="assets/images/teacher/t2.jpg" alt="Teacher" class="teacher-img">
+                            <div class="teacher-body">
+                                <h5>Rokeya Begum</h5>
+                                <p>Chemistry Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 7 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="700">
+                        <div class="teacher-card h-100">
+                            <img src="assets/images/trainer/trainer1.png" alt="Teacher" class="teacher-img">
+                            <div class="teacher-body">
+                                <h5>Jahangir Alam</h5>
+                                <p>Biology Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 8 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="800">
+                        <div class="teacher-card h-100">
+                            <img src="assets/images/teacher/t1.jpg" alt="Teacher" class="teacher-img">
+                            <div class="teacher-body">
+                                <h5>Mehnaz Sultana</h5>
+                                <p>ICT Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 9 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="900">
+                        <div class="teacher-card h-100">
+                            <img src="assets/images/trainer/trainer1.png" alt="Teacher" class="teacher-img">
+                            <div class="teacher-body">
+                                <h5>Mahmud Hasan</h5>
+                                <p>History Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 10 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="1000">
+                        <div class="teacher-card h-100">
+                            <img src="assets/images/teacher/t2.jpg" alt="Teacher" class="teacher-img">
+                            <div class="teacher-body">
+                                <h5>Sharmin Akter</h5>
+                                <p>Geography Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 11 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="1100">
+                        <div class="teacher-card h-100">
+                            <img src="assets/images/trainer/trainer1.png" alt="Teacher" class="teacher-img">
+                            <div class="teacher-body">
+                                <h5>Khaled Hossain</h5>
+                                <p>Economics Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 12 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="1200">
+                        <div class="teacher-card h-100">
+                            <img src="assets/images/teacher/t1.jpg" alt="Teacher" class="teacher-img">
+                            <div class="teacher-body">
+                                <h5>Ayesha Siddiqua</h5>
+                                <p>Religion Teacher</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section (School Website Version) -->
+        <section class="why-choose-us py-5" style="background-color: #f8f9fa;">
+            <div class="container">
+                <!-- Section Title -->
+                <div class="mb-5" data-aos="fade-up">
+                    <h2 class="fw-bold section-title" style="color: var(--secondary);">Why Choose <span
+                            style="color: var(--primary);">Sunrise Model School</span></h2>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="row g-4">
+                    <!-- Feature 1: Expert Teachers -->
+                    <div class="col-md-4">
+                        <div class="feature-card text-center p-4 h-100 rounded shadow-sm bg-white transition-hover"
+                            data-aos="fade-up" data-aos-delay="100">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-chalkboard-teacher fa-3x why-icon"></i>
+                            </div>
+                            <h5 class="fw-bold">Expert Teachers</h5>
+                            <p class="text-muted">Learn from experienced and passionate teachers committed to student
+                                success.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2: Interactive Learning -->
+                    <div class="col-md-4">
+                        <div class="feature-card text-center p-4 h-100 rounded shadow-sm bg-white transition-hover"
+                            data-aos="fade-up" data-aos-delay="200">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-book-reader fa-3x why-icon"></i>
+                            </div>
+                            <h5 class="fw-bold">Interactive Learning</h5>
+                            <p class="text-muted">Hands-on workshops, projects, and engaging lessons for practical
+                                knowledge.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3: Career Guidance -->
+                    <div class="col-md-4">
+                        <div class="feature-card text-center p-4 h-100 rounded shadow-sm bg-white transition-hover"
+                            data-aos="fade-up" data-aos-delay="300">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-user-graduate fa-3x why-icon"></i>
+                            </div>
+                            <h5 class="fw-bold">Career Guidance</h5>
+                            <p class="text-muted">Dedicated counseling and mentorship to help students plan their future
+                                confidently.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4: Modern Facilities -->
+                    <div class="col-md-4">
+                        <div class="feature-card text-center p-4 h-100 rounded shadow-sm bg-white transition-hover"
+                            data-aos="fade-up" data-aos-delay="400">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-school fa-3x why-icon"></i>
+                            </div>
+                            <h5 class="fw-bold">Modern Facilities</h5>
+                            <p class="text-muted">Well-equipped classrooms, labs, library, and sports facilities for
+                                holistic
+                                growth.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 5: Extracurricular Activities -->
+                    <div class="col-md-4">
+                        <div class="feature-card text-center p-4 h-100 rounded shadow-sm bg-white transition-hover"
+                            data-aos="fade-up" data-aos-delay="500">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-futbol fa-3x why-icon"></i>
+                            </div>
+                            <h5 class="fw-bold">Extracurricular Activities</h5>
+                            <p class="text-muted">Clubs, sports, arts, and cultural activities to develop well-rounded
+                                individuals.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 6: Proven Track Record -->
+                    <div class="col-md-4">
+                        <div class="feature-card text-center p-4 h-100 rounded shadow-sm bg-white transition-hover"
+                            data-aos="fade-up" data-aos-delay="600">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-award fa-3x why-icon"></i>
+                            </div>
+                            <h5 class="fw-bold">Proven Track Record</h5>
+                            <p class="text-muted">Consistent academic excellence and successful student outcomes year
+                                after
+                                year.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="700">
+                    <a href="about.html" class="btn btn-primary px-5 py-3">Learn More About Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="achievements-section">
+            <div class="container">
+                <div class="mb-5" data-aos="fade-up">
+                    <h2 class="fw-bold section-title" style="color: var(--secondary);">Achievements & <span
+                            style="color: var(--primary);">Success Stories</span></h2>
+                </div>
+
+                <div class="row g-4 d-flex">
+                    <!-- Card 1 -->
+                    <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+                        <div class="achievement-card d-flex flex-column h-100">
+                            <img src="assets/images/achivements/academic.avif" alt="Academic Excellence"
+                                class="achievement-img">
+                            <div class="achievement-body mt-auto">
+                                <h5>Academic Excellence</h5>
+                                <p>Our students consistently achieve top grades and outstanding results in national
+                                    exams and
+                                    competitions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <div class="achievement-card d-flex flex-column h-100">
+                            <img src="assets/images/achivements/sports.avif" alt="Sports Achievements"
+                                class="achievement-img">
+                            <div class="achievement-body mt-auto">
+                                <h5>Sports & Athletics</h5>
+                                <p>We have a strong track record in inter-school sports competitions, fostering teamwork
+                                    and
+                                    discipline.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <div class="achievement-card d-flex flex-column h-100">
+                            <img src="assets/images/achivements/community.jpg" alt="Cultural Achievements"
+                                class="achievement-img">
+                            <div class="achievement-body mt-auto">
+                                <h5>Cultural & Arts</h5>
+                                <p>Our students excel in music, debate, drama, and art competitions at local and
+                                    national
+                                    levels.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+                        <div class="achievement-card d-flex flex-column h-100">
+                            <img src="assets/images/achivements/culture.jpg" alt="Alumni Success"
+                                class="achievement-img">
+                            <div class="achievement-body mt-auto">
+                                <h5>Alumni Success</h5>
+                                <p>Graduates from our school have excelled in higher education, professional careers,
+                                    and public
+                                    service.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="500">
+                        <div class="achievement-card d-flex flex-column h-100">
+                            <img src="assets/images/achivements/art.jfif" alt="National Recognition"
+                                class="achievement-img">
+                            <div class="achievement-body mt-auto">
+                                <h5>National Recognition</h5>
+                                <p>Our school has been honored with multiple awards for excellence in education and
+                                    holistic
+                                    student development.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="600">
+                        <div class="achievement-card d-flex flex-column h-100">
+                            <img src="assets/images/achivements/national.jpg" alt="Community Engagement"
+                                class="achievement-img">
+                            <div class="achievement-body mt-auto">
+                                <h5>Community Engagement</h5>
+                                <p>Students actively participate in community service and social initiatives, developing
+                                    responsibility and leadership skills.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Faq Section -->
+        <section class="faq-section">
+            <div class="faq-container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="fw-bold section-title" style="color: var(--secondary);">Frequently Asked <span
+                            style="color: var(--primary);">Questions</span></h2>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What is Konika Cadet Academy?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Konika Cadet Academy is a leading coaching institute preparing students for admission into
+                            various
+                            cadet colleges, government schools, and competitive exams with top-quality guidance and
+                            resources.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Which courses do you offer?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer courses for Cadet College Admission, PSC, JSC, SSC, HSC preparation, and special
+                            training
+                            for competitive academic exams.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How can I enroll in a course?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can visit our campus or contact us through our official website and hotline to register
+                            for
+                            your desired course.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you provide online classes?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer both physical and online classes to ensure flexibility for all students.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <!-- Main Content End -->
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row text-md-start">
+                <!-- Column 1: Logo & Social -->
+                <div class="col-md-3 mb-4">
+                    <div class="footer-logo">
+                        <a href="index.html" class="text-white">
+                            <a href="index.html" class="d-flex align-items-center">
+                                <img src="assets/images/white-loog.png" alt="Konika Coaching" height="60" class="me-2">
+                            </a>
+                            <!-- Konika <span>Cadet Academy</span></a> -->
+                    </div>
+                    <p class="mt-2" style="font-size: 14px; color: #bbb;">
+                        Empowering students with knowledge, skills, and confidence since 2005.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Column 2: Useful Links -->
+                <div class="col-md-2 mb-4">
+                    <h5>Useful Links</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="admission.html">Admission Info</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Academic Resources -->
+                <div class="col-md-2 mb-4">
+                    <h5>Academics</h5>
+                    <ul>
+                        <li><a href="courses.html">Our Courses</a></li>
+                        <li><a href="schedule.html">Class Schedule</a></li>
+                        <li><a href="results.html">Exam Results</a></li>
+                        <li><a href="events.html">Events & Seminars</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Newsletter -->
+                <div class="col-md-2 mb-4">
+                    <h5>Join Our Newsletter</h5>
+                    <form class="newsletter">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <!-- Column 3: Academic Resources -->
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Mymensingh Sadar, Bangladesh</li>
+                        <li><i class="fas fa-phone me-2"></i> +880 1234-567890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@konikacoaching.com</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                &copy; 2025 Konika Cadet Academy. All Rights Reserved | Designed with ❤️ for Students
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- Bootstrap JS (with Popper) -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+    <!-- Responsive Menu JS -->
+    <script src="assets/js/responsiveMenu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script> new WOW().init(); </script>
+
+    <script>
+        document.querySelectorAll(".faq-question").forEach(button => {
+            button.addEventListener("click", () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle("active");
+            });
+        });
+
+    </script>
+    <!-- counter -->
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const increment = Math.ceil(target / speed);
+
+                    if (count < target) {
+                        counter.innerText = count + increment;
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        let counterSection = document.querySelector("#counters");
+        let started = false;
+        window.addEventListener("scroll", () => {
+            let sectionTop = counterSection.offsetTop - window.innerHeight + 200;
+            if (window.scrollY > sectionTop && !started) {
+                animateCounters();
+                started = true;
+            }
+        });
+    </script>
+
+</body>
+
+</html>
