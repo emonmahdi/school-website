@@ -631,7 +631,8 @@ ul li {
 
 .carousel-caption {
   z-index: 2;
-  max-width: 600px;
+  max-width: 900px;
+  padding-left: 100px;
 }
 
 .custom-arrow {
@@ -678,6 +679,13 @@ ul li {
 
 .custom-indicators .active {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    max-width: 100%;
+    padding-left: 0;
+  }
 }
 
 /* -----------Quick Section Styles ----------------- */
@@ -1261,5 +1269,10 @@ ul li {
   padding: 40px 0;
 }
 .contact-title {
+  color: var(--primary);
+}
+
+.contact-section .school-btn-primary:hover {
+  background-color: #fff;
   color: var(--primary);
 }

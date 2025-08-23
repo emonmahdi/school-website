@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>School Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="assets/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Favicon (Optional) -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <!-- Animate.css for smooth animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <style>
+        :root {
+            --primary: #ec1c24;
+            --secondary: #1c353d;
+            --bg-light: #f9f9f9;
+        }
+
+        .gallery-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            /* margin-bottom: 30px; */
+            color: var(--secondary);
+        }
+
+        .section-title span {
+            color: var(--primary);
+        }
+
+        .video-thumbnail {
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .video-thumbnail:hover {
+            transform: scale(1.05);
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .video-thumbnail:hover .video-overlay {
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <!-- Header Top -->
+    <header class="topbar-header text-white">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+                <!-- Center: Coaching Center Address -->
+                <div class="col-12 col-md-12 text-center">
+                    <!-- Latest New Section Start -->
+                    <div class="notice-bar">
+                        <div class="notice-label">Latest News</div>
+                        <div class="notice-content">
+                            <div class="scroll-text">
+                                📢 কলেজে আগামীকাল থেকে বার্ষিক পরীক্ষা শুরু হবে। সকল শিক্ষার্থীকে যথাসময়ে উপস্থিত থাকার
+                                নির্দেশ
+                                দেওয়া হলো। নতুন
+                                ভর্তি কার্যক্রম ৫ জুলাই শুরু হবে। আরও তথ্যের জন্য ওয়েবসাইট ভিজিট করুন।
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Bottom Sticky Nav -->
+    <nav class="header-bottom sticky-top shadow-sm bg-white">
+        <div class="container d-flex align-items-center justify-content-between py-2">
+            <!-- Logo -->
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img src="assets/images/white-loog.png" alt="School Logo" height="60" class="me-2">
+            </a>
+            <!-- Hamburger for Mobile -->
+            <button class="btn d-md-none" id="menu-toggle">
+                <i class="fas fa-bars fs-5"></i>
+            </button>
+            <!-- Main Menu -->
+            <ul class="nav d-none d-md-flex mb-0 fw-semibold">
+                <!-- Home -->
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link px-3">Home</a>
+                </li>
+
+                <!-- About -->
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link px-3">About Us</a>
+                </li>
+
+                <!-- Academics Dropdown -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle px-3" data-bs-toggle="dropdown">Academics</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="academic-primary.html">Primary Section</a></li>
+                        <li><a class="dropdown-item" href="academic-highschool.html">Secondary Section</a></li>
+                        <li><a class="dropdown-item" href="academic-primary.html">Higher Secondary</a></li>
+                        <li><a class="dropdown-item" href="academic-highschool.html">Subjects & Curriculum</a></li>
+                    </ul>
+                </li>
+
+                <!-- Admissions -->
+                <li class="nav-item">
+                    <a href="admission.html" class="nav-link px-3">Admissions</a>
+                </li>
+
+                <!-- Teachers -->
+                <li class="nav-item">
+                    <a href="teachers.html" class="nav-link px-3">Teachers</a>
+                </li>
+
+                <!-- Notice Board -->
+                <li class="nav-item">
+                    <a href="all-notices.html" class="nav-link px-3">Notice Board</a>
+                </li>
+
+                <!-- Events -->
+                <li class="nav-item">
+                    <a href="events.html" class="nav-link px-3">Events</a>
+                </li>
+
+                <!-- Gallery Dropdown -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link active dropdown-toggle px-3" data-bs-toggle="dropdown">Gallery</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="gallery.html">Image Gallery</a></li>
+                        <li><a class="dropdown-item" href="videoGallery.html">Video Gallery</a></li>
+                    </ul>
+                </li>
+
+                <!-- Results -->
+                <li class="nav-item">
+                    <a href="results.html" class="nav-link px-3">Results</a>
+                </li>
+
+                <!-- Contact -->
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link px-3">Contact</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Mobile Slide Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <button id="closeMenu" class="btn-close btn-close-white ms-auto m-3"></button>
+        <ul class="list-unstyled ps-2 pt-4 pe-4">
+            <!-- Home -->
+            <li><a href="index.html">Home</a></li>
+            <!-- About Us -->
+            <li><a href="about.html">About Us</a></li>
+            <!-- Courses -->
+            <li>
+                <a href="#">Courses</a>
+                <ul class="submenu">
+                    <li><a href="">Academic Coaching</a></li>
+                    <li><a href="">Career Guidance</a></li>
+                    <li><a href="">Skill Development</a></li>
+                    <li><a href="">Online Workshops</a></li>
+                </ul>
+            </li>
+            <!-- Blog -->
+            <li><a href="blog.html">Blog</a></li>
+            <!-- Gallery -->
+            <li><a href="gallery.html">Image Gallery</a></li>
+            <!-- Video Gallery -->
+            <li><a href="videoGallery.html">Video Gallery</a></li>
+            <!-- Contact -->
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Start -->
+    <main>
+        <!-- Page Top Header -->
+        <section class="page-top-header text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bold">Video Gallery </h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Video Gallery </li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+        <section class="gallery-section py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold section-title">Our Video <span>Gallery</span></h2>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Video 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="video-thumbnail" data-bs-toggle="modal" data-bs-target="#videoModal"
+                            data-video="https://www.youtube.com/embed/tgbNymZ7vqY">
+                            <img src="https://img.youtube.com/vi/tgbNymZ7vqY/hqdefault.jpg" alt="Video 1">
+                            <div class="video-overlay"> <i class="fa-solid fa-circle-play play-btn"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="video-thumbnail" data-bs-toggle="modal" data-bs-target="#videoModal"
+                            data-video="https://www.youtube.com/embed/tgbNymZ7vqY">
+                            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Video 2">
+                            <div class="video-overlay"> <i class="fa-solid fa-circle-play play-btn"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="video-thumbnail" data-bs-toggle="modal" data-bs-target="#videoModal"
+                            data-video="https://www.youtube.com/embed/tgbNymZ7vqY">
+                            <img src="https://img.youtube.com/vi/ysz5S6PUM-U/hqdefault.jpg" alt="Video 3">
+                            <div class="video-overlay"> <i class="fa-solid fa-circle-play play-btn"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Modal -->
+        <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="ratio ratio-16x9">
+                            <iframe id="videoFrame" src="" title="Video player" frameborder="0"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+    <!-- Main Content End -->
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row text-md-start">
+                <!-- Column 1: Logo & Social -->
+                <div class="col-md-3 mb-4">
+                    <div class="footer-logo">
+                        <a href="index.html" class="text-white">
+                            <a href="index.html" class="d-flex align-items-center">
+                                <img src="assets/images/white-loog.png" alt="Konika Coaching" height="60" class="me-2">
+                            </a>
+                            <!-- Konika <span>Cadet Academy</span></a> -->
+                    </div>
+                    <p class="mt-2" style="font-size: 14px; color: #bbb;">
+                        Empowering students with knowledge, skills, and confidence since 2005.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Column 2: Useful Links -->
+                <div class="col-md-2 mb-4">
+                    <h5>Useful Links</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="admission.html">Admission Info</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Academic Resources -->
+                <div class="col-md-2 mb-4">
+                    <h5>Academics</h5>
+                    <ul>
+                        <li><a href="courses.html">Our Courses</a></li>
+                        <li><a href="schedule.html">Class Schedule</a></li>
+                        <li><a href="results.html">Exam Results</a></li>
+                        <li><a href="events.html">Events & Seminars</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Newsletter -->
+                <div class="col-md-2 mb-4">
+                    <h5>Join Our Newsletter</h5>
+                    <form class="newsletter">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <!-- Column 3: Academic Resources -->
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Mymensingh Sadar, Bangladesh</li>
+                        <li><i class="fas fa-phone me-2"></i> +880 1234-567890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@konikacoaching.com</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                &copy; 2025 Konika Cadet Academy. All Rights Reserved | Designed with ❤️ for Students
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- Bootstrap JS (with Popper) -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+    <!-- Responsive Menu JS -->
+    <script src="assets/js/responsiveMenu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script> new WOW().init(); </script>
+
+
+</body>
+
+</html>
